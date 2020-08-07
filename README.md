@@ -56,7 +56,7 @@ Proveedor de internet: Entel fibra óptica
 
 
 
-Entrega 2:
+Desempeño MATMUL:
 
 ![](plot.png)
 
