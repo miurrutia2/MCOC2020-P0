@@ -56,3 +56,8 @@ Proveedor de internet: Entel fibra óptica
 
 
 
+Entrega 2:
+
+![](plot.png)
+
+
