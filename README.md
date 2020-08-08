@@ -60,4 +60,13 @@ Desempeño MATMUL:
 
 ![](plot.png)
 
+El gráfico difiere en los tiempos en que se realizá la mulplicación de cada tamaño de matriz. Esto puede deberse al procesador.
 
+El gráfico es lineal debido a que la RAM va almacenando información de a poco, por lo que no depende de el tiempo como el otro gráfico, sino que depende de la cantidad de información entregada, lo que va variando según el tamaño de la matriz.
+
+Python 3.8.1
+
+Numpy 1.19.1
+
+Se utiliza solo un procesador
+![](Procesador.png)
