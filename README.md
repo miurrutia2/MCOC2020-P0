@@ -56,7 +56,10 @@ Proveedor de internet: Entel fibra óptica
 
 
 
-Desempeño MATMUL:
+
+
+DESEMPEÑO MATMUL:
+
 
 ![](plot.png)
 
@@ -70,3 +73,15 @@ Numpy 1.19.1
 
 Se utiliza solo un procesador
 ![](Procesador.png)
+
+
+
+MIMATMUL
+
+
+
+![](mimatmul_grafico.png)
+
+
+Se utiliza solo un procesador
+![](Procesador mimatmul.png)
