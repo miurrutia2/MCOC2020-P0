@@ -1,6 +1,6 @@
 # MCOC2020-P0
 
-Mi computador principal
+## Mi computador principal
 
 Marca/modelo: MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)
 
@@ -58,7 +58,7 @@ Proveedor de internet: Entel fibra óptica
 
 
 
-DESEMPEÑO MATMUL:
+## DESEMPEÑO MATMUL:
 
 
 ![](plot.png)
@@ -76,12 +76,11 @@ Se utiliza solo un procesador
 
 
 
-MIMATMUL
-
-
+## MIMATMUL
 
 ![](mimatmul_grafico.png)
 
+Los tiempos de multiplicación de matrices son mucho mayores al realizarlo en python puro. Al realizar el código de esta forma, no se optimiza de la mejor manera, se realiza de manera exponencial. Además, numpy esta escrito en un lenguaje de más bajo nivel que python (C, C++), lo que hace que el programa sea más rápido.
 
-Se utiliza solo un procesador
-![](Procesador mimatmul.png)
+
+![](procesador_mimatmul.png)
