@@ -101,4 +101,11 @@ Los tiempos de multiplicación de matrices son mucho mayores al realizarlo en py
 ![](Graficos_entrega_4/Caso_3_single.png) ![](Graficos_entrega_4/Caso_3_double.png) 
 ![](Graficos_entrega_4/Caso_3_half.png) ![](Graficos_entrega_4/Caso_3_longdouble.png) 
 
-En el caso de overwrite=True se puede apreciar que el tiempo transcurrido para para una matriz N es ligeramente menor. 
+En el caso de overwrite=True se puede apreciar que el tiempo transcurrido para para una matriz N es ligeramente menor. Además, se puede apreciar que el uso de memoria aumenta a medida que aumentan los bits (half<single<double<longdouble).
+
+¿Qué algoritmo de inversión cree que utiliza cada método?
+Para obtener la inversa de A numpy, al igual que scipy, utiliza la matriz identidad y realiza una factorización LU.
+
+¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? 
+
+
