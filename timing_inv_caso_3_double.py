@@ -29,7 +29,7 @@ for i in range(10):
     
         dt = t2 - t1
         
-        size = 3 * (n**2) * 8
+        size = 3 * (n**2) * 64
         
         dts.append(dt)
         memory.append(size)
