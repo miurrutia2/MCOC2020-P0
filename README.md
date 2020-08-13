@@ -84,3 +84,19 @@ Los tiempos de multiplicación de matrices son mucho mayores al realizarlo en py
 
 
 ![](procesador_mimatmul.png)
+
+## DESEMPEÑO DE INV
+
+### Caso 1
+
+![](Graficos_entrega_4/Caso_1_single.png) ![](Graficos_entrega_4/Caso_1_double.png) 
+
+### Caso 2
+
+![](Graficos_entrega_4/Caso_2_single.png) ![](Graficos_entrega_4/Caso_2_double.png) 
+![](Graficos_entrega_4/Caso_2_half.png) ![](Graficos_entrega_4/Caso_2_longdouble.png) 
+
+### Caso 3
+
+![](Graficos_entrega_4/Caso_3_single.png) ![](Graficos_entrega_4/Caso_3_double.png) 
+![](Graficos_entrega_4/Caso_3_half.png) ![](Graficos_entrega_4/Caso_3_longdouble.png) 
