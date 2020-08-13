@@ -88,7 +88,7 @@ Los tiempos de multiplicación de matrices son mucho mayores al realizarlo en py
 ## DESEMPEÑO DE INV
 
 ### Caso 1
-
+(Los gráficos half y longdouble no se incluyen debido a que np.linalg no soporta los tipos float16 y float128)
 ![](Graficos_entrega_4/Caso_1_single.png) ![](Graficos_entrega_4/Caso_1_double.png) 
 
 ### Caso 2
@@ -100,3 +100,5 @@ Los tiempos de multiplicación de matrices son mucho mayores al realizarlo en py
 
 ![](Graficos_entrega_4/Caso_3_single.png) ![](Graficos_entrega_4/Caso_3_double.png) 
 ![](Graficos_entrega_4/Caso_3_half.png) ![](Graficos_entrega_4/Caso_3_longdouble.png) 
+
+En el caso de overwrite=True se puede apreciar que el tiempo transcurrido para para una matriz N es ligeramente menor. 
