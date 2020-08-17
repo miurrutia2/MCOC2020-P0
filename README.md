@@ -108,4 +108,4 @@ Para obtener la inversa de A numpy, al igual que scipy, utiliza la matriz identi
 
 ¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? 
 
-
+![](Entrega_6/Grafico_entrega_6.png)
