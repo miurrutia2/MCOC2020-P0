@@ -76,7 +76,7 @@ for i in N:
         
         #Usando solve scipy pos overwrite
         t1 = perf_counter() 
-        linalg.solve(A,B, assume_a = "pos", overwrite_a=True )
+        linalg.solve(A,B, assume_a = "pos", overwrite_a=True, overwrite_b=True )
         t2 = perf_counter()
         
         dt3 = t2 - t1
