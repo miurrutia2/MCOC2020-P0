@@ -101,11 +101,20 @@ Los tiempos de multiplicación de matrices son mucho mayores al realizarlo en py
 ![](Graficos_entrega_4/Caso_3_single.png) ![](Graficos_entrega_4/Caso_3_double.png) 
 ![](Graficos_entrega_4/Caso_3_half.png) ![](Graficos_entrega_4/Caso_3_longdouble.png) 
 
-En el caso de overwrite=True se puede apreciar que el tiempo transcurrido para para una matriz N es ligeramente menor. Además, se puede apreciar que el uso de memoria aumenta a medida que aumentan los bits (half<single<double<longdouble).
+- En el caso de overwrite=True se puede apreciar que el tiempo transcurrido para para una matriz N es ligeramente menor. Además, se puede apreciar que el uso de memoria aumenta a medida que aumentan los bits (half<single<double<longdouble).
 
-¿Qué algoritmo de inversión cree que utiliza cada método?
+- ¿Qué algoritmo de inversión cree que utiliza cada método?
 Para obtener la inversa de A numpy, al igual que scipy, utiliza la matriz identidad y realiza una factorización LU.
 
-¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? 
+- ¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? 
+
+## DESEMPEÑO Ax=b
 
 ![](Entrega_6/Grafico_entrega_6.png)
+
+- Se puede observar en el gráfico que para matrices más pequeñas el mejor desempeño lo tiene el solver de numpy. Sin embargo, para matrices más grandes spSolve_pos con o sin overwrite tuvieron un mejor desempeño.
+- Para el caso spSolve_pos con overwrite, el sobreescribir los datos de A y b no generó una diferencia realmente significativa para matrices de gran tamaño, pero en matrices pequeñas, este proceso fue más eficiente que sin el overwrite.
+- Como era de esperarse, el solver con peor desempeño fue el que requeria invertir la matriz y luego multiplicarla por b. Sin embargo, se puede notar que para matrices pequeñas no es el con el peor desempeño.
+- Si bien en matrices pequeñas el desempeño de los distintos solvers varía bastante en matrices pequeñas, a medida que estas aumentan de tamaño, los solvers comienzan a tener un desempeño bastante similar entre sí.
+- Además, se puede observar que para el caso del solver spSolve symmetric no hubo una diferencia extremadamente notoria en el rendimiento.
+
