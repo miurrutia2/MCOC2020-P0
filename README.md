@@ -185,7 +185,11 @@ def matriz_laplaciana_dispersa(N, dtype = np.double):
 ![](Entrega_7/INV_dispersa.png)
 
 
-
+*El tiempo se ensamblado parece ser menor en matrices llenas que en dispersas, sin embargo pasa lo contrario en las soluciones.
+*Las soluciones de las matrices dispersas suelen tener una pendiente menor, es decir el aumento de N no les afecta tanto como a las matrices llenas.
+* El tiempo de ensamblado a medida que aumenta N aumenta bastante, tanto para matrices llenas como dispersas. De hecho, los tiempos en N = 16000 son practicamente los mismos, para el ensamblado.
+* El tiempo de solución es bastante menor en las matrices dispersas (exceptuando el caso de INV), por lo que a medida que aumenta N no se ve un gran aumento en el tiempo.
+*Las matrices son bastante estables, los gráficos muestran caso muy puntuales en los que esto no se cumple.
 
 
 
