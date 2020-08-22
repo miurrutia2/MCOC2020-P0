@@ -118,3 +118,74 @@ Para obtener la inversa de A numpy, al igual que scipy, utiliza la matriz identi
 - Si bien en matrices pequeñas el desempeño de los distintos solvers varía bastante en matrices pequeñas, a medida que estas aumentan de tamaño, los solvers comienzan a tener un desempeño bastante similar entre sí.
 - Además, se puede observar que para el caso del solver spSolve symmetric no hubo una diferencia extremadamente notoria en el rendimiento.
 
+
+
+## Matrices dispersas y complejidad computacional
+
+### Código matrices 
+
+import numpy as np
+
+from scipy.sparse import lil_matrix, csc_matrix
+
+def matriz_laplaciana_llena(N, dtype = np.double):
+
+    A = np.identity(N, dtype) * 2
+    
+    for i in range(N):
+    
+        for j in range(N):
+	
+            if i + 1 == j or i == j + 1:
+	    
+                A[i, j] = - 1
+
+    return A      
+
+def matriz_laplaciana_dispersa(N, dtype = np.double):
+
+    A = lil_matrix((N,N))
+    
+    for i in range(N):
+    
+        for j in range(N):
+	
+            if i == j:
+	    
+                A[i, j] = 2
+		
+            if (i + 1) == j or (i - 1) == j: 
+	    
+                A[i, j] = - 1     
+		
+    return csc_matrix(A)
+
+*  Matmul matriz llena
+
+![](Entrega_7/Matmul_llena.png)
+
+* Matmul matriz dispersa
+
+![](Entrega_7/Matmul_dispersa.png)
+
+* Solve matriz llena
+
+![](Entrega_7/Solve_llena.png)
+
+* Solve matriz dispersa
+
+![](Entrega_7/Solve_dispersa.png)
+
+* INV matriz llena
+
+![](Entrega_7/INV_llena.png)
+
+* INV matriz dispersa
+
+![](Entrega_7/INV_dispersa.png)
+
+
+
+
+
+
