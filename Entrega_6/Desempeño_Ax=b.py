@@ -4,11 +4,13 @@ import matplotlib.pyplot as plt
 from time import perf_counter
 
 
-N = [2, 5, 10, 12, 15, 20, 30, 40, 45, 50, 55, 60, 75, 100, 125, 160, 200, 250, 350, 500, 600, 800, 1000, 2000, 5000, 10000]
+N = [2, 5]
 
-def matriz_laplaciana(N):
-    A = np.identity(N)*2-np.eye(N,k=-1)-np.eye(N,k=1)
+
+def matriz_laplaciana_llena(N, dtype = np.double):
+    A = np.identity(N, dtype)*2-np.eye(N,k=-1)-np.eye(N,k=1)
     return A
+
 
 names = ["A_invB_inv.txt", "A_invB_npSolve.txt", "A_invB_spSolve.txt", "A_invB_spSolve_symmetric.txt", "A_invB_spSolve_pos.txt", "A_invB_spSolve_pos_overwrite.txt"]
 
